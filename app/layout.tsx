@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import Head from "next/head";
-import { useEffect } from "react";
+import { RSI_menu } from "@/components/rsi/menu";
+import { Footer } from "@/components/rsi/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,7 +36,11 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <div id="home">
+            <RSI_menu />
+          </div>
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
