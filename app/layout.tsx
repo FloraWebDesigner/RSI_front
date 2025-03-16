@@ -37,7 +37,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <div id="home">
-            <RSI_menu />
+          <RSI_menu />
           </div>
           {children}
           <Footer />

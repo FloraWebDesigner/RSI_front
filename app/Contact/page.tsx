@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <main>
       <OriginSection />
-      <SectionTitle myTitle="Contact Us" id="#" />
+      <SectionTitle myTitle="Contact Us" />
       <ContactSection />
     </main>
   );

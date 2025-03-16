@@ -1,6 +1,6 @@
 interface TitleProps {
   myTitle: string;
-  id: string;
+  id?: string;
 }
 
 export function SectionTitle({ myTitle, id }: TitleProps) {

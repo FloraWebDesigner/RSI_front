@@ -6,10 +6,10 @@ export default function About() {
   return (
     <main>
       <AboutCarousel />
-      <SectionTitle myTitle="Company History" id="#" />
+      <SectionTitle myTitle="Company History" />
       <History />
-      <SectionTitle myTitle="Family Legacy" id="#" />
-      <SectionTitle myTitle="Core Values" id="#" />
+      <SectionTitle myTitle="Family Legacy" />
+      <SectionTitle myTitle="Core Values" />
     </main>
   );
 }

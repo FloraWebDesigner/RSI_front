@@ -8,6 +8,14 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Link from "next/link";
+
+const images = [
+  "/img/carpet44.jpeg",
+  "/img/carpet22.jpeg",
+  "/img/dogtreats8.jpeg",
+  "/img/dogtreats2.jpeg",
+];
 
 export function AboutCarousel() {
   return (
@@ -18,23 +26,30 @@ export function AboutCarousel() {
       className="w-full"
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+        {images.map((image, index) => (
           <CarouselItem key={index} className="w-full h-auto">
-            <div className="p-1">
-              <Card className="w-full h-60">
-                <CardContent className="flex w-full h-full items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
+            <Card className="w-full h-80 relative p-0">
+              <CardContent
+                className="flex w-full h-full items-center justify-center p-0"
+                style={{
+                  backgroundImage: `url(${image})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                }}
+              >
+                {/* <span className="text-3xl font-semibold">{index + 1}</span> */}
                 {index === 0 && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-fuchsia-600 bg-opacity-40 text-white p-4">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-0">
                     <h2 className="text-2xl font-bold mb-2">
                       {index === 0 ? "Crafting Excellence Since 1975" : ""}
                     </h2>
-                    <Button>{index === 0 ? "Connect" : ""}</Button>
+                    <Link href="/Contact" passHref>
+                      <Button>{index === 0 ? "Connect" : ""}</Button>
+                    </Link>
                   </div>
                 )}
-              </Card>
-            </div>
+              </CardContent>
+            </Card>
           </CarouselItem>
         ))}
       </CarouselContent>

@@ -5,9 +5,9 @@ export default function Petzee() {
   return (
     <main>
       <CarpetCarousel />
-      <SectionTitle myTitle="Our Products" id="#" />
+      <SectionTitle myTitle="Our Products" />
       {/* add categorized products */}
-      <SectionTitle myTitle="Our Presence" id="#" />
+      <SectionTitle myTitle="Our Presence" />
     </main>
   );
 }
