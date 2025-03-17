@@ -1,4 +1,4 @@
-import { CarpetCarousel } from "@/components/rsi/carpet-carousel";
+import { CarpetCarousel } from "@/components/rsi/carpet/carpet-carousel";
 import { SectionTitle } from "@/components/rsi/section-title";
 
 export default function Petzee() {

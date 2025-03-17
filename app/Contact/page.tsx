@@ -1,6 +1,6 @@
 import { SectionTitle } from "@/components/rsi/section-title";
 import { OriginSection } from "@/components/rsi/origin-section";
-import { ContactSection } from "@/components/rsi/contact";
+import { ContactSection } from "@/components/rsi/contact/contact";
 
 export default function Contact() {
   return (
