@@ -1,7 +1,6 @@
 import { FooterTitle } from "./footer-title";
 import { FooterMenu } from "./footer-nav";
 import {
-  Phone,
   Mail,
   Youtube,
   Instagram,

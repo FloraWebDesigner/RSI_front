@@ -8,7 +8,7 @@ export function CpSection() {
     <section className="ourCp mx-16">
       <div className="flex h-60">
         <img
-          src="img/company1.jpeg"
+          src="/img/company1.jpeg"
           alt="this is a cpmpany pic"
           className="w-1/2 object-cover object-center"
         />

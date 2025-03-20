@@ -1,4 +1,3 @@
-import { Menubar } from "@/components/ui/menubar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -11,7 +10,7 @@ export function FooterMenu() {
       <Link href="/About" passHref>
         <Button variant="ghost">About</Button>
       </Link>
-      <Link href="/Carpet" passHref>
+      <Link href="/WovenConcept" passHref>
         <Button variant="ghost">Woven Carpet</Button>
       </Link>
       <Link href="/Petzee" passHref>

@@ -12,8 +12,15 @@ import { Button } from "../../ui/button";
 import { MoveUpRight } from "lucide-react";
 import Link from "next/link";
 
+interface Product {
+  ProductName: string;
+  Desc?: string;
+  Origin?: string[];
+  // ProductLink: string;
+}
+
 export function BizSection() {
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -56,10 +63,15 @@ export function BizSection() {
               <CardDescription>{product.Desc}</CardDescription>
             </CardHeader>
             <CardContent>
-              <p>Origins: {product.Origin.join(" | ")}</p>
+              <p>
+                Origins: {product.Origin?.join(" | ") || "No origin available"}
+              </p>
             </CardContent>
             <CardFooter>
-              <Link href={product.ProductLink} passHref>
+              <Link
+                href={`/${product.ProductName.replace(/\s+/g, "")}`}
+                passHref
+              >
                 <Button>
                   Learn More
                   <MoveUpRight />

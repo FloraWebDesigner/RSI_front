@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuContent,
 } from "../ui/dropdown-menu";
+import Image from "next/image";
 
 function RSI_menu() {
   return (
@@ -19,14 +20,21 @@ function RSI_menu() {
         <Link href="/About" passHref>
           <Button variant="ghost">About</Button>
         </Link>
-        <img src="img/logo.png" alt="logo" width="120" />
+        <Image
+          src="/img/logo.png"
+          alt="logo"
+          width="120"
+          height={0}
+          style={{ height: "auto" }}
+          layout="intrinsic"
+        />
         <DropdownMenu>
           <DropdownMenuTrigger className="font-medium p-2 rounded-md hover:bg-accent hover:text-accent-foreground hover:cursor-pointer">
             Business
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem>
-              <Link href="/Carpet" passHref>
+              <Link href="/WovenConcept" passHref>
                 Carpet
               </Link>
             </DropdownMenuItem>

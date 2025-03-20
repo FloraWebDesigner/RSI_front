@@ -36,9 +36,3 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 
 
-## email setup
-react-email:
-https://react.email/docs/getting-started/manual-setup
-
-npm install react-email -D -E
-npm install @react-email/components react react-dom -E
