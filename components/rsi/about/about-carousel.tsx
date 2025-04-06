@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 
 const images = [
+  "/img/legacyVideo.gif",
   "/img/carpet44.jpeg",
   "/img/carpet22.jpeg",
   "/img/dogtreats8.jpeg",

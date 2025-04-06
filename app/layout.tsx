@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { RSI_menu } from "@/components/rsi/menu";
 import { Footer } from "@/components/rsi/footer";
+import GoogleMapsProvider from "@/components/rsi/GoogleMapsProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,8 +17,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your App Name",
-  description: "Your app description",
+  title: "RSI",
+  description: "Your Healthy Living Expert",
+  icons: {
+    icon: "/img/meta-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -27,18 +31,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div id="home">
-            <RSI_menu />
-          </div>
-          {children}
-          <Footer />
+          <GoogleMapsProvider>
+            <div id="home">
+              <RSI_menu />
+            </div>
+            {children}
+            <Footer />
+          </GoogleMapsProvider>
         </ThemeProvider>
       </body>
     </html>

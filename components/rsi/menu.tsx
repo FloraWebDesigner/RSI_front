@@ -1,3 +1,5 @@
+"use client";
+
 import { Menubar } from "@/components/ui/menubar";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "../ui/mode-toggle";
@@ -12,8 +14,8 @@ import Image from "next/image";
 
 function RSI_menu() {
   return (
-    <Menubar className="flex justify-between">
-      <div className="w-full p-2 flex gap-4 h-16 justify-center items-center mx-10">
+    <Menubar className="flex justify-between h-12">
+      <div className="w-full p-2 flex gap-4 justify-center items-center mx-10">
         <Link href="/" passHref>
           <Button variant="ghost">Home</Button>
         </Link>

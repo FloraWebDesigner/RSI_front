@@ -10,6 +10,14 @@ import {
 } from "@/components/ui/carousel";
 import Link from "next/link";
 
+const images = [
+  "/img/petVideo.gif",
+  "/img/dogtreats10.jpeg",
+  "/img/dogtreats7.jpeg",
+  "/img/dogtreats1.jpeg",
+  "/img/dogtreats4.jpeg",
+];
+
 export function PetzeeCarousel() {
   return (
     <Carousel
@@ -19,15 +27,20 @@ export function PetzeeCarousel() {
       className="w-full"
     >
       <CarouselContent>
-        {Array.from({ length: 5 }).map((_, index) => (
+      {images.map((image, index) => (
           <CarouselItem key={index} className="w-full h-auto">
             <div className="p-1">
-              <Card className="w-full h-60">
-                <CardContent className="flex w-full h-full items-center justify-center p-6">
-                  <span className="text-3xl font-semibold">{index + 1}</span>
-                </CardContent>
+              <Card className="w-full h-80 relative p-0">
+                 <CardContent
+                                  className="flex w-full h-full items-center justify-center"
+                                  style={{
+                                    backgroundImage: `url(${image})`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                  }}
+                                >
                 {index === 0 && (
-                  <div className="absolute inset-0 flex flex-col items-center justify-center bg-blue-500 bg-opacity-40 text-white p-4">
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
                     <h2 className="text-2xl font-bold mb-2">
                       {index === 0 ? "A happy dog enjoying a treat" : ""}
                     </h2>
@@ -36,6 +49,7 @@ export function PetzeeCarousel() {
                     </Link>
                   </div>
                 )}
+                </CardContent>
               </Card>
             </div>
           </CarouselItem>

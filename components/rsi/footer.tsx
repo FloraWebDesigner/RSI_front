@@ -15,8 +15,9 @@ export function Footer() {
       id="contact"
       className="px-16 py-8"
       style={{
-        backgroundColor: "var(--foreground)",
-        color: "var(--background)",
+        backgroundColor: "#1F1F23",
+        color: "white",
+        borderTop: "1px solid #2B2B2F",
       }}
     >
       <div className="flex flex-row justify-between items-start w-full h-60">

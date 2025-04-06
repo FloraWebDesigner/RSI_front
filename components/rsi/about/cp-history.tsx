@@ -31,9 +31,12 @@ export function History() {
         onValueChange={handleMarkerClick}
       >
         <div className="relative w-full mt-4">
-          <Progress value={progress} className="w-full h-3 bg-gray-200">
+          <Progress
+            value={progress}
+            className="w-full h-3 text-foreground border border-gray-600"
+          >
             <div
-              className="absolute h-3 bg-gray-700"
+              className="absolute h-3 bg-foreground"
               style={{ width: `${progress}%` }}
             />
           </Progress>
@@ -41,26 +44,26 @@ export function History() {
           <TabsList className="flex justify-between w-full absolute top-[-12px]">
             <TabsTrigger
               value="1975"
-              className="bg-gray-800 text-white p-4 rounded-full cursor-pointer text-xs w-6 h-6 flex items-center justify-center"
+              className="bg-foreground text-background p-4 rounded-full cursor-pointer text-xs font-semibold w-6 h-6 flex items-center justify-center"
               style={{ transform: "translateX(-1rem)" }}
             >
               1975
             </TabsTrigger>
             <TabsTrigger
               value="1990"
-              className="bg-gray-800 text-white p-4 rounded-full cursor-pointer text-xs w-6 h-6 flex items-center justify-center"
+              className="bg-foreground text-background p-4 rounded-full cursor-pointer text-xs font-semibold w-6 h-6 flex items-center justify-center"
             >
               1990
             </TabsTrigger>
             <TabsTrigger
               value="2019"
-              className="bg-gray-800 text-white p-4 rounded-full cursor-pointer text-xs w-6 h-6 flex items-center justify-center"
+              className="bg-foreground text-background p-4 rounded-full cursor-pointer text-xs font-semibold w-6 h-6 flex items-center justify-center"
             >
               2019
             </TabsTrigger>
             <TabsTrigger
               value="now"
-              className="bg-gray-800 text-white p-4 rounded-full cursor-pointer text-xs w-6 h-6 flex items-center justify-center"
+              className="bg-foreground text-background p-4 rounded-full cursor-pointer text-xs font-semibold w-6 h-6 flex items-center justify-center"
               style={{ transform: "translateX(1rem)" }}
             >
               now
