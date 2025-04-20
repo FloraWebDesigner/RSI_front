@@ -56,7 +56,7 @@ export function History() {
             >
               <div className="relative">
                 <div className="w-20 h-20 rounded-full border-2 border-white bg-foreground flex items-center justify-center z-10 relative">
-                  <span className="text-white text-sm font-semibold">
+                  <span className="text-background text-sm font-semibold">
                     {year.label}
                   </span>
                 </div>

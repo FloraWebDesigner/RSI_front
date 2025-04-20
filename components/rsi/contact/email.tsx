@@ -42,8 +42,8 @@ export function ContactForm() {
   }
   return (
     <form onSubmit={handleSubmit} className="w-3/4">
-      <p className="text-center text-lg text-gray-300">
-        Your voice is important to us
+      <p className="text-center text-2xl text-gray-600 mb-8">
+        Your voice is important to us!
       </p>
       <div className="my-3">
         <Label htmlFor="name" className="mb-1">
