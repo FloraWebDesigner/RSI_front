@@ -11,10 +11,12 @@ import {
   DropdownMenuContent,
 } from "../ui/dropdown-menu";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 function RSI_menu() {
+  const { theme } = useTheme();
   return (
-    <Menubar className="flex justify-between h-12">
+    <Menubar className="flex justify-between h-16">
       <div className="w-full p-2 flex gap-4 justify-center items-center mx-10">
         <Link href="/" passHref>
           <Button variant="ghost">Home</Button>
@@ -23,9 +25,9 @@ function RSI_menu() {
           <Button variant="ghost">About</Button>
         </Link>
         <Image
-          src="/img/logo.png"
+          src={theme === "dark" ? "/img/logo_white.png" : "/img/logo_black.png"}
           alt="logo"
-          width="120"
+          width="180"
           height={0}
           style={{ height: "auto" }}
           layout="intrinsic"
@@ -36,13 +38,13 @@ function RSI_menu() {
           </DropdownMenuTrigger>
           <DropdownMenuContent>
             <DropdownMenuItem>
-              <Link href="/WovenConcept" passHref>
-                Carpet
+              <Link href="/Petzee" passHref>
+                Natural Dog Treats
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
-              <Link href="/Petzee" passHref>
-                Petzee
+              <Link href="/WovenConcept" passHref>
+                Handmade Carpets
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

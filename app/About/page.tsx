@@ -1,8 +1,7 @@
 import { AboutCarousel } from "@/components/rsi/about/about-carousel";
 import { SectionTitle } from "@/components/rsi/section-title";
-import { History } from "@/components/rsi/about/cp-history";
+import { History } from "@/components/rsi/about/cp-vertical-history";
 import { Legacy } from "@/components/rsi/about/legacy";
-import { CoreValue } from "@/components/rsi/about/core-value";
 
 export default function About() {
   return (
@@ -14,8 +13,6 @@ export default function About() {
         <SectionTitle myTitle="Family Legacy" />
         <Legacy />
       </div>
-      <SectionTitle myTitle="Core Values" />
-      <CoreValue />
     </main>
   );
 }

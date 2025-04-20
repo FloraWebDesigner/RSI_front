@@ -22,7 +22,7 @@ export function CpHightlights({ title, desc, icon }: CpCardProps) {
         {/* <CardDescription>Card Description</CardDescription> */}
       </CardHeader>
       <CardContent>
-        <p>{desc}</p>
+        <p className="text-center">{desc}</p>
       </CardContent>
       {/* <CardFooter>
     <p>Card Footer</p>

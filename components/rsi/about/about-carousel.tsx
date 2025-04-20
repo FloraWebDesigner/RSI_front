@@ -13,9 +13,7 @@ import Link from "next/link";
 const images = [
   "/img/legacyVideo.gif",
   "/img/carpet44.jpeg",
-  "/img/carpet22.jpeg",
   "/img/dogtreats8.jpeg",
-  "/img/dogtreats2.jpeg",
 ];
 
 export function AboutCarousel() {
@@ -41,11 +39,11 @@ export function AboutCarousel() {
                 {/* <span className="text-3xl font-semibold">{index + 1}</span> */}
                 {index === 0 && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-0">
-                    <h2 className="text-3xl font-bold mb-3">
+                    <h2 className="text-4xl font-bold mb-3">
                       {index === 0 ? "Crafting Excellence Since 1975" : ""}
                     </h2>
                     <Link href="/Contact" passHref>
-                      <Button>{index === 0 ? "Connect" : ""}</Button>
+                      <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">{index === 0 ? "Connect" : ""}</Button>
                     </Link>
                   </div>
                 )}

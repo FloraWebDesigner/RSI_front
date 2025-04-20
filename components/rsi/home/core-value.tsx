@@ -1,9 +1,9 @@
 "use client";
-import FlipCard from "./flip-card";
+import FlipCard from "../about/flip-card";
 
 export function CoreValue() {
   return (
-    <section className="core-values w-3/4 flex flex-row flex-wrap items-center justify-center mx-auto mb-10">
+    <section className="core-values flex flex-row flex-wrap items-center justify-center mx-16 mb-10">
       <FlipCard
         title="Commitment to Craftsmanship"
         details="Upholding the tradition of handmade, artisanal quality in every product we create and source."

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: "RSI",
   description: "Your Healthy Living Expert",
   icons: {
-    icon: "/img/meta-icon.png",
+    icon: "/img/logo-s.jpeg",
   },
 };
 

@@ -40,7 +40,7 @@ export function CarouselSize() {
               >
                 {index === 0 && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
-                    <h2 className="text-3xl font-bold mb-3">
+                    <h2 className="text-4xl font-bold mb-3">
                       {index === 0 ? "Crafting Excellence for Generations" : ""}
                     </h2>
                     <Link href="/About" passHref>

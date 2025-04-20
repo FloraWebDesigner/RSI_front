@@ -11,11 +11,11 @@ import {
 import Link from "next/link";
 
 const images = [
-  "/img/carpet-video.gif",
-  "/img/carpet1.jpeg",
-  "/img/carpet4.jpeg",
-  "/img/carpet3.jpeg",
   "/img/Persian-Carpets-1.jpg",
+  // "/img/carpet-video.gif",
+  // "/img/carpet1.jpeg",
+  // "/img/carpet4.jpeg",
+  // "/img/carpet3.jpeg",
 ];
 
 export function CarpetCarousel() {
@@ -41,13 +41,13 @@ export function CarpetCarousel() {
                 >
                   {index === 0 && (
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
-                      <h2 className="text-2xl font-bold mb-2">
+                      <h2 className="text-4xl font-bold mb-2">
                         {index === 0
                           ? "Timeless Craftsmanship, Woven by Generations"
                           : ""}
                       </h2>
                       <Link href="https://www.wovenconcept.com" passHref>
-                        <Button>
+                        <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
                           {index === 0 ? "Browse Our Collection" : ""}
                         </Button>
                       </Link>

@@ -5,10 +5,10 @@ import { ContactSection } from "@/components/rsi/contact/contact";
 export default function Contact() {
   return (
     <main>
-      <SectionTitle myTitle="Spanning the World, Connecting Cultures" />
-      <OriginSection />
       <SectionTitle myTitle="Contact Us" />
       <ContactSection />
+      <SectionTitle myTitle="Spanning the World, Connecting Cultures" />
+      <OriginSection />
     </main>
   );
 }

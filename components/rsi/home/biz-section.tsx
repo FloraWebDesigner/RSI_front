@@ -1,3 +1,4 @@
+"use client";
 import {
   Card,
   CardContent,
@@ -16,10 +17,18 @@ interface Product {
   ProductName: string;
   Desc?: string;
   Origin?: string[];
-  // ProductLink: string;
+  ProductLink?: string;
 }
 
-export function BizSection() {
+interface ProductCardProps {
+  productName?: string;
+  useGeneratedLink?: boolean
+}
+
+export function BizSection({
+  productName,
+  useGeneratedLink = false 
+}: ProductCardProps) {
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -28,7 +37,10 @@ export function BizSection() {
       setLoading(true);
       try {
         const data = await fetchProducts();
-        setProducts(data);
+        const filteredProducts = productName
+          ? data.filter((p) => p.ProductName === productName)
+          : data;
+        setProducts(filteredProducts);
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
@@ -37,10 +49,15 @@ export function BizSection() {
     };
 
     fetchData();
-  }, []);
+  }, [productName]);
+
 
   if (loading) {
     return <div>Loading...</div>;
+  }
+
+  if (products.length === 0) {
+    return <div>No products found</div>;
   }
 
   return (
@@ -53,7 +70,7 @@ export function BizSection() {
           key={index}
         >
           <img
-            src={`img/${product.ProductName}.jpeg`}
+            src={`img/${product.ProductName}.jpg`}
             alt="product image"
             className="w-1/2 object-cover object-center"
           />
@@ -68,10 +85,14 @@ export function BizSection() {
               </p>
             </CardContent>
             <CardFooter>
-              <Link
-                href={`/${product.ProductName.replace(/\s+/g, "")}`}
-                passHref
-              >
+            <Link 
+              href={
+                useGeneratedLink 
+                  ? `/${product.ProductName.replace(/\s+/g, "")}`
+                  : product.ProductLink || `/${product.ProductName.replace(/\s+/g, "")}`
+              } 
+              passHref
+            >
                 <Button>
                   Learn More
                   <MoveUpRight />
