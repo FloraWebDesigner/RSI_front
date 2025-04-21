@@ -1,5 +1,8 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+
 export function History() {
   const years: { id: keyof typeof content; label: string }[] = [
     { id: "1975", label: "1975" },
@@ -69,7 +72,7 @@ export function History() {
 
       {/* Content Sections */}
       <div className="w-[70%]">
-        {years.map((year) => (
+        {years.map((year, index) => (
           <div
             key={year.id}
             className="relative py-12"
@@ -81,11 +84,35 @@ export function History() {
                 {content[year.id].title}
               </h2>
               <p className="mb-6">{content[year.id].text}</p>
-              <img
-                src={content[year.id].image}
-                alt="Historical moment"
-                className="w-full h-60 object-cover rounded-lg"
-              />
+              <div className="relative">
+  <img
+    src={content[year.id].image}
+    alt="Historical moment"
+    className="w-full h-60 object-cover rounded-lg"
+  />
+  {index === 1 && (
+    <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+      <Link href="https://www.wovenconcept.com" passHref legacyBehavior>
+        <a target="_blank" rel="noopener noreferrer">
+          <Button>
+            Learn More
+          </Button>
+        </a>
+      </Link>
+    </div>
+  )}
+  {index === 2 && (
+    <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+      <Link href="https://www.petzee.ca" passHref legacyBehavior>
+        <a target="_blank" rel="noopener noreferrer">
+          <Button>
+            Learn More
+          </Button>
+        </a>
+      </Link>
+    </div>
+  )}
+</div>
             </div>
           </div>
         ))}

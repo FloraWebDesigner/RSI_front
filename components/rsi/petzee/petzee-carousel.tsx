@@ -38,10 +38,16 @@ export function PetzeeCarousel() {
                       <h2 className="text-4xl font-bold mb-2">
                         {index === 0 ? "A happy dog enjoying a treat" : ""}
                       </h2>
-                      <Link href="https://www.petzee.ca" passHref>
-                        <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
-                          {index === 0 ? "Explore Our Treats" : ""}
-                        </Button>
+                      <Link
+                        href="https://www.petzee.ca"
+                        passHref
+                        legacyBehavior
+                      >
+                        <a target="_blank" rel="noopener noreferrer">
+                          <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                            {index === 0 ? "Explore Our Treats" : ""}
+                          </Button>
+                        </a>
                       </Link>
                     </div>
                   )}

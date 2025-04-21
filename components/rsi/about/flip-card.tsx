@@ -19,12 +19,12 @@ export default function FlipCard({ title, details }: FlipCardProps) {
         }`}
       >
         {/* Front Side */}
-        <div className="absolute w-full p-5 h-full border-1 text-accent-foreground flex flex-col items-center justify-center shadow-sm backface-hidden">
+        <div className="absolute w-full p-5 h-full border border-slate-200 dark:border-slate-700 text-accent-foreground flex flex-col items-center justify-center shadow-sm backface-hidden">
           <h2 className="text-xl font-bold text-center">{title}</h2>
         </div>
 
         {/* Back Side */}
-        <div className="absolute w-full h-full border-1 bg-accent-foreground text-accent flex flex-col items-center justify-center shadow-lg rotate-y-180 backface-hidden p-5">
+        <div className="absolute w-full h-full border border-slate-200 dark:border-slate-700 bg-accent-foreground text-accent flex flex-col items-center justify-center shadow-lg rotate-y-180 backface-hidden p-5">
           <p className="text-sm">{details}</p>
         </div>
       </div>

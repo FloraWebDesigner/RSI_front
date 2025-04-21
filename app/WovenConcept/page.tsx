@@ -4,6 +4,7 @@ import { SectionTitle } from "@/components/rsi/section-title";
 import { BizSection } from "@/components/rsi/home/biz-section";
 import CarpetContent from "@/components/rsi/carpet/carpet-content";
 import CarpetHero from "@/components/rsi/carpet/carpet-hero";
+import CarpetManufactoring from "@/components/rsi/carpet/carpet-manufactoring";
 
 export default function Petzee() {
   return (
@@ -13,6 +14,8 @@ export default function Petzee() {
       <BizSection productName="Woven Concept" />
       <SectionTitle myTitle="Handwoven Carpets" />
       <CarpetContent />
+      <SectionTitle myTitle="Handmade Carpet Manufacturing Process" />
+      <CarpetManufactoring />
       <SectionTitle myTitle="Our Presence" />
       <section className="maps mx-16 mb-10">
         <GetProductOrigins productName="Woven Concept" />

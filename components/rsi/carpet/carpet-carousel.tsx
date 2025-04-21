@@ -46,10 +46,16 @@ export function CarpetCarousel() {
                           ? "Timeless Craftsmanship, Woven by Generations"
                           : ""}
                       </h2>
-                      <Link href="https://www.wovenconcept.com" passHref>
-                        <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
-                          {index === 0 ? "Browse Our Collection" : ""}
-                        </Button>
+                      <Link
+                        href="https://www.wovenconcept.com"
+                        passHref
+                        legacyBehavior
+                      >
+                        <a target="_blank" rel="noopener noreferrer">
+                          <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                            {index === 0 ? "Browse Our Collection" : ""}
+                          </Button>
+                        </a>
                       </Link>
                     </div>
                   )}

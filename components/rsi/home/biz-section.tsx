@@ -65,8 +65,8 @@ export function BizSection({
       {products.map((product, index) => (
         <Card
           className={`flex ${
-            index % 2 === 0 ? "flex-row h-60" : "flex-row-reverse h-60"
-          } border-0 rounded-none py-0`}
+            index % 2 === 0 ? "flex-row h-60 " : "flex-row-reverse h-60"
+          } border-slate-200 dark:border-slate-700 rounded-none py-0`}
           key={index}
         >
           <img

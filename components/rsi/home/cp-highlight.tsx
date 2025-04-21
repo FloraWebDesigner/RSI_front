@@ -15,7 +15,7 @@ interface CpCardProps {
 
 export function CpHightlights({ title, desc, icon }: CpCardProps) {
   return (
-    <Card className="border-0 flex justify-start items-center rounded-none">
+    <Card className="border border-slate-200 dark:border-slate-700 flex justify-start items-center rounded-none">
       {icon}
       <CardHeader>
         <CardTitle>{title}</CardTitle>

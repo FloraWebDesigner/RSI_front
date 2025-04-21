@@ -13,7 +13,7 @@ export function CpSection() {
           className="w-1/2 object-cover object-center"
         />
         <div className="flex flex-col items-center justify-center p-4 w-1/2">
-          <h2 className="text-2xl font-bold mb-2">This is OUR Company title</h2>
+          <h2 className="text-2xl font-bold mb-2">Rooted in Craft, Driven by Care</h2>
           <Link href="/About" passHref>
             <Button>
               Learn More
