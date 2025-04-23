@@ -10,7 +10,7 @@ export default function PetzeeManufactoring() {
         variant="filled"
       />
       <ManufactoringCard
-        imageUrl="/img/petzee-manufactoring-2.jpeg"
+        imageUrl="/img/dogtreats5.jpeg"
         title="Cleaning"
         description="Each pizzle is meticulously hand-cleaned using only water—absolutely no bleach, no chemicals, and no artificial agents. This careful, manual cleaning process removes surface impurities while preserving the natural proteins and flavor. It's a crucial step in delivering a safe, all-natural chew that reflects our organic standards."
         variant="transparent"
@@ -38,13 +38,13 @@ export default function PetzeeManufactoring() {
         variant="filled"
       />
       <ManufactoringCard
-        imageUrl="/img/dogtreats5.jpeg"
+        imageUrl="/img/petzee-manufactoring-6.jpeg"
         title="Quality Inspection"
         description="Each stick is individually inspected by hand to ensure top-tier quality, safety, and consistency. Our low-odor bully sticks are achieved purely through extended drying—not by using chemical deodorants. Every batch is approved for export and meets strict international food safety standards.
 "
         variant="transparent"
       />
-            <ManufactoringCard
+      <ManufactoringCard
         imageUrl="/img/dogtreats4.jpeg"
         title="Packaging & Export"
         description="After passing inspection, our bully sticks are packed in food-grade, puncture-proof, resealable bags that lock in freshness without the need for preservatives. We proudly ship our products to customers and distributors across North America, Europe, and Asia—sharing our commitment to chemical-free, handcrafted dog treats worldwide.

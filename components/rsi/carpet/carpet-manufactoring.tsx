@@ -42,7 +42,7 @@ export default function CarpetManufactoring() {
             <ManufactoringCard
         imageUrl="/img/carpet-manufactoring-7.jpeg"
         title="Finishing & Trimming"
-        description="Once dried, the rug is trimmed, bound, and detailed—entirely by hand. No step is rushed, and every rug is personally inspected before it leaves our workshop. Our family’s name is tied to every piece, and we make sure it reflects our generational standards of quality and integrity."
+        description="Once dried, the rug is trimmed, bound, and detailed—entirely by hand. No step is rushed, and every rug is personally inspected before it leaves our workshop. Our family's name is tied to every piece, and we make sure it reflects our generational standards of quality and integrity."
         variant="filled"
       />
                   <ManufactoringCard
