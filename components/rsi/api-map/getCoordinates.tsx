@@ -1,3 +1,5 @@
+import mapKey from "@/components/rsi/GoogleMapsProvider";
+
 export default async function getCountryCoordinates(
   countryName: string
 ): Promise<{ lat: number; lng: number } | null> {
@@ -5,7 +7,7 @@ export default async function getCountryCoordinates(
     const response = await fetch(
       `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
         countryName
-      )}&key=${process.env.NEXT_PUBLIC_MAP_KEY}`
+      )}&key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`
     );
     const data = await response.json();
     if (data.results && data.results.length > 0) {

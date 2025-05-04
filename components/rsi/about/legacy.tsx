@@ -26,7 +26,7 @@ export function Legacy() {
             by hard work, risk-taking, and continuous learning. Now in its third
             generation, the company upholds a legacy of craftsmanship and
             innovation, blending tradition with new opportunities. Each
-            generation builds on its predecessors' foundation, ensuring a
+            generation builds on its predecessors&apos foundation, ensuring a
             passion for excellence remains central to its mission.
           </p>
         </div>

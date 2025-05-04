@@ -16,7 +16,6 @@ interface GoogleMapProps {
   origins: Origin[];
 }
 
-console.log("API Key:", process.env.NEXT_PUBLIC_MAP_KEY);
 
 const GoogleMapComponent: React.FC<GoogleMapProps> = ({ origins }) => {
   const [selectedOrigin, setSelectedOrigin] = React.useState<null | number>(

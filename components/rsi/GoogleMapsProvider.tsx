@@ -9,7 +9,7 @@ export default function GoogleMapsProvider({
   children: ReactNode;
 }) {
   return (
-    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_MAP_KEY as string}>
+    <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string}>
       {children}
     </LoadScript>
   );
