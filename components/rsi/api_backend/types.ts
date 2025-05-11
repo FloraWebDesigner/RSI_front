@@ -17,12 +17,12 @@ export interface Origin{
 }
 
 export const manualDescriptions: Record<string, string> = {
-    Pakistan: "This is a manual description for Pakistan",
-    Iran: "This is a manual description for Iran",
-    Afghanistan: "This is a manual description for Afghanistan",
-    Turkey: "This is a manual description for Turkey",
-    India: "This is a manual description for India",
-    Colombia: "This is a manual description for Colombia",
-    Brazil: "This is a manual description for Brazil",
-    Canada: "This is a manual description for Canada",
+    Pakistan: "Handmade Manufacturing",
+    Iran: "Handmade Manufacturing",
+    Afghanistan: "Handmade Manufacturing",
+    Turkey: "Handmade Manufacturing",
+    India: "Handmade Manufacturing",
+    Colombia: "Handmade Manufacturing",
+    Brazil: "Handmade Manufacturing",
+    Canada: "Handmade Manufacturing",
   };
