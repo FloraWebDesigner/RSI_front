@@ -152,3 +152,23 @@ code {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+button.gm-ui-hover-effect {
+  height: 20px !important;
+  width: 40px !important;
+  position: relative !important;
+}
+
+button.gm-ui-hover-effect::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: -10px !important;
+  right: -10px !important;
+  bottom: -20px !important;
+  z-index: 0 !important;
+}
+
+button.gm-ui-hover-effect > span {
+  pointer-events: none !important;
+}
