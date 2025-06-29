@@ -10,7 +10,7 @@ export default function FlipCard({ title, details }: FlipCardProps) {
 
   return (
     <div
-      className="relative w-1/4 h-48 cursor-pointer perspective"
+      className="relative h-48 cursor-pointer perspective w-full"
       onClick={() => setFlipped(!flipped)}
     >
       <div

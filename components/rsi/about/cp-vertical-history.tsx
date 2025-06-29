@@ -35,13 +35,13 @@ export function History() {
   };
 
   return (
-    <div className="mx-16 flex gap-6 justify-center">
+    <div className="flex gap-6 justify-center w-full md:mx-16 ">
       {/* Timeline */}
       <div className="relative flex flex-col items-center">
         {/* Vertical line */}
         <div className="absolute top-0 bottom-0 flex flex-col items-center">
           {/* Top cap circle */}
-          <div className="w-3 h-3 rounded-full bg-foreground border-0 z-10" />
+          <div className="rounded-full bg-foreground border-0 z-10 w-3 h-3" />
 
           {/* Main line */}
           <div className="w-px bg-foreground flex-1" />
@@ -50,7 +50,7 @@ export function History() {
           <div className="w-3 h-3 rounded-full bg-foreground -mb-1.5 z-10" />
         </div>
         {/* Year markers positioned relative to content */}
-        <div className="relative h-full w-8">
+        <div className="relative h-full w-6 md:w-8">
           {years.map((year) => (
             <div
               key={year.id}
@@ -58,7 +58,7 @@ export function History() {
               style={{ top: `calc(${years.indexOf(year) * 25 + 12.5}%)` }}
             >
               <div className="relative">
-                <div className="w-20 h-20 rounded-full border-2 border-white bg-foreground flex items-center justify-center z-10 relative">
+                <div className="w-10 h-10 md:w-20 md:h-20 rounded-full md:border-2 border-white bg-foreground flex items-center justify-center z-10 relative">
                   <span className="text-background text-sm font-semibold">
                     {year.label}
                   </span>
@@ -75,44 +75,44 @@ export function History() {
         {years.map((year, index) => (
           <div
             key={year.id}
-            className="relative py-12"
+            className="relative py-6 md:py-12"
             style={{ minHeight: "25vh" }}
             id={`year-${year.id}`}
           >
             <div className="max-w-2xl mx-auto">
-              <h2 className="text-2xl font-bold mb-4">
+              <h2 className="text-xl md:text-2xl font-bold mb-4">
                 {content[year.id].title}
               </h2>
               <p className="mb-6">{content[year.id].text}</p>
               <div className="relative">
-  <img
-    src={content[year.id].image}
-    alt="Historical moment"
-    className="w-full h-60 object-cover rounded-lg"
-  />
-  {index === 1 && (
-    <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
-      <Link href="https://www.wovenconcept.com" passHref legacyBehavior>
-        <a target="_blank" rel="noopener noreferrer">
-          <Button>
-            Learn More
-          </Button>
-        </a>
-      </Link>
-    </div>
-  )}
-  {index === 2 && (
-    <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
-      <Link href="https://www.petzee.ca" passHref legacyBehavior>
-        <a target="_blank" rel="noopener noreferrer">
-          <Button>
-            Learn More
-          </Button>
-        </a>
-      </Link>
-    </div>
-  )}
-</div>
+                <img
+                  src={content[year.id].image}
+                  alt="Historical moment"
+                  className="w-full h-60 object-cover rounded-lg"
+                />
+                {index === 1 && (
+                  <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+                    <Link
+                      href="https://www.wovenconcept.com"
+                      passHref
+                      legacyBehavior
+                    >
+                      <a target="_blank" rel="noopener noreferrer">
+                        <Button>Learn More</Button>
+                      </a>
+                    </Link>
+                  </div>
+                )}
+                {index === 2 && (
+                  <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2">
+                    <Link href="https://www.petzee.ca" passHref legacyBehavior>
+                      <a target="_blank" rel="noopener noreferrer">
+                        <Button>Learn More</Button>
+                      </a>
+                    </Link>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ))}

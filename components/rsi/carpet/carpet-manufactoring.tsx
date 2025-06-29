@@ -2,7 +2,7 @@ import ManufactoringCard from "../manufactoring-card";
 
 export default function CarpetManufactoring() {
   return (
-    <>
+    <div className="flex flex-col justify-center items-center">
       <ManufactoringCard
         imageUrl="/img/carpet-manufactoring-1.jpeg"
         title="Wool Sourcing & Preparation"
@@ -39,18 +39,18 @@ export default function CarpetManufactoring() {
         description="After weaving, every rug is washed by hand using natural soap and fresh water—never bleach or industrial cleaners. The carpets are then dried under open skies, just as they were when our grandfather laid them out in the sun. This careful, chemical-free process enhances both the softness and the colors."
         variant="transparent"
       />
-            <ManufactoringCard
+      <ManufactoringCard
         imageUrl="/img/carpet-manufactoring-7.jpeg"
         title="Finishing & Trimming"
         description="Once dried, the rug is trimmed, bound, and detailed—entirely by hand. No step is rushed, and every rug is personally inspected before it leaves our workshop. Our family's name is tied to every piece, and we make sure it reflects our generational standards of quality and integrity."
         variant="filled"
       />
-                  <ManufactoringCard
+      <ManufactoringCard
         imageUrl="/img/carpet-manufactoring-8.jpeg"
         title="Packing & Export"
         description="Our rugs are packed by hand using breathable materials, preserving their quality during global transit. Today, we proudly export our carpets around the world—each one a testament to three generations of dedication, craftsmanship, and a love for handmade beauty."
         variant="filled"
       />
-    </>
+    </div>
   );
 }

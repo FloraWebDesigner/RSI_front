@@ -22,7 +22,7 @@ export function AboutCarousel() {
       opts={{
         align: "start",
       }}
-      className="w-full"
+      className="mx-8 md:w-full"
     >
       <CarouselContent>
         {images.map((image, index) => (
@@ -39,11 +39,13 @@ export function AboutCarousel() {
                 {/* <span className="text-3xl font-semibold">{index + 1}</span> */}
                 {index === 0 && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-0">
-                    <h2 className="text-4xl font-bold mb-3">
+                    <h2 className="font-bold mb-3 mx-8 text-2xl md:text-4xl">
                       {index === 0 ? "Crafting Excellence Since 1975" : ""}
                     </h2>
                     <Link href="/Contact" passHref>
-                      <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">{index === 0 ? "Connect" : ""}</Button>
+                      <Button className="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+                        {index === 0 ? "Connect" : ""}
+                      </Button>
                     </Link>
                   </div>
                 )}

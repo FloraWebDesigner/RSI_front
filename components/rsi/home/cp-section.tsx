@@ -5,15 +5,17 @@ import Link from "next/link";
 
 export function CpSection() {
   return (
-    <section className="ourCp mx-16">
-      <div className="flex h-60">
+    <section className="ourCp mx-4">
+      <div className="flex flex-col h-60 mx-4 md:flex-row md:mx-16">
         <img
           src="/img/company1.jpeg"
           alt="this is a cpmpany pic"
-          className="w-1/2 object-cover object-center"
+          className="w-full object-cover object-center md:w-1/2 md:h-auto"
         />
-        <div className="flex flex-col items-center justify-center p-4 w-1/2">
-          <h2 className="text-2xl font-bold mb-2">Rooted in Craft, Driven by Care</h2>
+        <div className="flex flex-col items-center justify-center w-full p-4 md:flex md:w-1/2 md:h-60">
+          <h2 className="text-2xl font-bold mb-2 text-center">
+            Rooted in Craft, Driven by Care
+          </h2>
           <Link href="/About" passHref>
             <Button>
               Learn More
@@ -22,7 +24,7 @@ export function CpSection() {
           </Link>
         </div>
       </div>
-      <div className="grid grid-cols-4">
+      <div className="grid grid-cols-1 text-center mx-4 sm:grid-cols-2 md:grid-cols-4 md:mx-16">
         <CpHightlights
           title="Handmade Trade"
           desc="Established in 1975, specializing in handmade goods & global trade"

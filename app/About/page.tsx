@@ -9,7 +9,7 @@ export default function About() {
       <AboutCarousel />
       <SectionTitle myTitle="Company History" />
       <History />
-      <div className="bg-accent/65 w-full my-10 py-3 text-accent-foreground">
+      <div className="bg-accent/65 text-accent-foreground m-8 md:w-full md:my-10 md:py-3 ">
         <SectionTitle myTitle="Family Legacy" />
         <Legacy />
       </div>

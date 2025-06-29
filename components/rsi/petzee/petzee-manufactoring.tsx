@@ -2,7 +2,7 @@ import ManufactoringCard from "../manufactoring-card";
 
 export default function PetzeeManufactoring() {
   return (
-    <>
+    <div className="flex flex-col justify-center items-center">
       <ManufactoringCard
         imageUrl="/img/petzee-manufactoring-1.jpeg"
         title="Raw Material Sourcing"
@@ -51,6 +51,6 @@ export default function PetzeeManufactoring() {
 "
         variant="filled"
       />
-    </>
+    </div>
   );
 }

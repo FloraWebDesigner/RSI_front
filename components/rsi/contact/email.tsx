@@ -13,9 +13,9 @@ export function ContactForm() {
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
 
-    const response = await fetch('/api/submit', {
-      method: 'POST',
-      body: formData
+    const response = await fetch("/api/submit", {
+      method: "POST",
+      body: formData,
     });
 
     const result = await response.json();
@@ -30,7 +30,7 @@ export function ContactForm() {
     }
   }
   return (
-    <form onSubmit={handleSubmit} className="w-3/4">
+    <form onSubmit={handleSubmit} className="w-full md:w-3/4">
       <p className="text-center text-2xl text-gray-600 mb-8">
         Your voice is important to us!
       </p>

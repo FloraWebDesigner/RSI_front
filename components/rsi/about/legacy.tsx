@@ -2,8 +2,8 @@ import { Quote } from "lucide-react";
 
 export function Legacy() {
   return (
-    <section className="legacy w-3/4 mx-auto">
-      <div className="flex flex-row items-center gap-5 mx-6 mb-10">
+    <section className="legacy mx-auto w-full md:w-3/4 ">
+      <div className="flex items-center gap-5 mx-6 flex-col md:flex-row mb-10">
         <img
           src="https://www.wovenconcept.com/cdn/shop/files/Woven_Concepts_1.jpg?v=1693238878&width=750"
           alt="Woven Concepts"

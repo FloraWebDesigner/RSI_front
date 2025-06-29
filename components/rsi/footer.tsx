@@ -20,8 +20,8 @@ export function Footer() {
         borderTop: "1px solid #2B2B2F",
       }}
     >
-      <div className="flex flex-row justify-between items-start w-full h-60">
-        <div className="flex flex-col w-1/3">
+      <div className="flex flex-col items-center w-full space-y-16 md:h-60 md:flex-row md:justify-between md:items-start md:space-y-0">
+        <div className="w-full md:w-1/3">
           <FooterTitle title="Business Address" />
           <div className="pl-2 flex flex-col gap-4 my-auto justify-center items-center mt-4">
             <p className="text-center">
@@ -43,15 +43,15 @@ export function Footer() {
             </p>
           </div>
         </div>
-        <div className="flex flex-col w-1/3">
+        <div className="w-full md:w-1/3">
           <FooterTitle title="Contact Information" />
           <div className="mx-auto flex flex-col">
             {/* <p className="flex flex-row my-3 items-center">
               <Phone className="mr-3" size={16} />
               1234567890
             </p> */}
-            <p className="flex flex-row my-3 items-center">
-              <Mail className="mr-3" size={16} />
+            <p className="flex flex-row md:my-3 items-center justify-center">
+              <Mail className="md:mr-3" size={16} />
               khan.burhan@rsincorp.com
             </p>
             <div className="social flex flex-col gap-10 justify-center items-center mt-6">
@@ -66,9 +66,9 @@ export function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col w-1/3 justify-center">
+        <div className="w-full md:w-1/3 md:text-center">
           <FooterTitle title="Quick Links" />
-          <div className="mx-auto">
+          <div className="text-center">
             <FooterMenu />
           </div>
         </div>

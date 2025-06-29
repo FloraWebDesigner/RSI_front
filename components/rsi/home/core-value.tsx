@@ -3,7 +3,7 @@ import FlipCard from "../about/flip-card";
 
 export function CoreValue() {
   return (
-    <section className="core-values flex flex-row flex-wrap items-center justify-center mx-16 mb-10">
+    <section className="core-values grid grid-cols-1 mx-8 sm:grid-cols-2 md:grid-cols-4 md:mx-16">
       <FlipCard
         title="Commitment to Craftsmanship"
         details="Upholding the tradition of handmade, artisanal quality in every product we create and source."

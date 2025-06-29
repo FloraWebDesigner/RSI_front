@@ -28,7 +28,7 @@ export function CarouselSize() {
     >
       <CarouselContent>
         {images.map((image, index) => (
-          <CarouselItem key={index} className="w-full h-auto">
+          <CarouselItem key={index} className="w-full h-70">
             <Card className="w-full h-80 relative p-0">
               <CardContent
                 className="flex w-full h-full items-center justify-center"
@@ -40,7 +40,7 @@ export function CarouselSize() {
               >
                 {index === 0 && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
-                    <h2 className="text-4xl font-bold mb-3">
+                    <h2 className="text-4xl font-bold mb-3 max-md:text-center">
                       {index === 0 ? "Crafting Excellence for Generations" : ""}
                     </h2>
                     <Link href="/About" passHref>
