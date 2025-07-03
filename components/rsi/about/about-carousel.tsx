@@ -22,7 +22,7 @@ export function AboutCarousel() {
       opts={{
         align: "start",
       }}
-      className="mx-8 md:w-full"
+      className="w-full"
     >
       <CarouselContent>
         {images.map((image, index) => (

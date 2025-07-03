@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menubar } from "@/components/ui/menubar";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "../ui/mode-toggle";
@@ -15,8 +15,16 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 
 function RSI_menu() {
-  const { theme } = useTheme();
+  const { theme, resolvedTheme } = useTheme(); // Use resolvedTheme instead of systemTheme
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLogo, setCurrentLogo] = useState("/img/logo_black.png"); // Default to light
+
+  useEffect(() => {
+    // resolvedTheme already accounts for system preference
+    setCurrentLogo(
+      resolvedTheme === "dark" ? "/img/logo_white.png" : "/img/logo_black.png"
+    );
+  }, [resolvedTheme]); // Only depend on resolvedTheme
 
   const closeMenu = () => {
     setIsOpen(false);
@@ -33,12 +41,14 @@ function RSI_menu() {
           <Button variant="ghost">About</Button>
         </Link>
         <Image
-          src={theme === "dark" ? "/img/logo_white.png" : "/img/logo_black.png"}
+          src={currentLogo}
           alt="logo"
-          width="180"
-          height={0}
-          style={{ height: "auto" }}
-          layout="intrinsic"
+          width={180}
+          height={48}
+          priority
+          onError={(e) => {
+            e.currentTarget.src = "/img/logo_black.png"; // Fallback
+          }}
         />
         <DropdownMenu>
           <DropdownMenuTrigger className="font-medium p-2 rounded-md hover:bg-accent hover:text-accent-foreground hover:cursor-pointer">

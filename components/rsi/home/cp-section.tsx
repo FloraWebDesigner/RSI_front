@@ -6,7 +6,7 @@ import Link from "next/link";
 export function CpSection() {
   return (
     <section className="ourCp mx-4">
-      <div className="flex flex-col h-60 mx-4 md:flex-row md:mx-16">
+      <div className="flex flex-col mx-4 md:flex-row md:mx-16 md:h-60 ">
         <img
           src="/img/company1.jpeg"
           alt="this is a cpmpany pic"
